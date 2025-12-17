@@ -1,28 +1,44 @@
-<!doctype html>
-<html lang="fr">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>ERVRATECH — CIM‑Core</title>
-  <meta name="description" content="CIM‑Core détecte anomalies et slow drifts via GitHub Actions." />
-  <link rel="stylesheet" href="assets/styles.css" />
-</head>
-<body>
-<header class="header">
-  <h1>CIM‑Core</h1>
-  <p>Détection d’anomalies et dérives lentes (slow drifts) via GitHub Actions.</p>
-  <a class="btn" href="https://buy.stripe.com/3cIbJ0bBPd8M8mU10tdUY01" target="_blank">Acheter</a>
-</header>
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
 
-<main>
-  <section>
-    <h2>Contact</h2>
-    <p>Email : <a href="mailto:contact@ervra.tech">contact@ervra.tech</a></p>
-  </section>
-</main>
+.subtitle {
+  opacity: 0.9;
+  max-width: 70ch;
+}
 
-<footer>
-  <p>© ERVRATECH</p>
-</footer>
-</body>
-</html>
+.cta {
+  margin-top: 18px;
+}
+
+.note {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+.card {
+  margin: 24px 0;
+  padding: 18px 18px;
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 14px;
+  background: rgba(255,255,255,0.03);
+}
+
+.grid {
+  display: grid;
+  gap: 18px;
+}
+
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.footer {
+  margin-top: 40px;
+  opacity: 0.8;
+}
