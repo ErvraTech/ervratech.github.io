@@ -1,44 +1,291 @@
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ErvraTech — Tools for drift, instability and complex dynamics</title>
+  <meta name="description" content="ErvraTech builds lightweight, auditable tools to detect drift, instability and hidden dynamics in complex systems." />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a class="brand" href="#top" aria-label="ErvraTech home">
+          <img src="assets/logo.svg" alt="" />
+          <span>ErvraTech</span>
+        </a>
 
-.subtitle {
-  opacity: 0.9;
-  max-width: 70ch;
-}
+        <nav class="pills" aria-label="Primary">
+          <a class="pill" href="#products"><strong>Products</strong></a>
+          <a class="pill" href="#architectures">Architectures</a>
+          <a class="pill" href="#open">Open-source</a>
+          <a class="pill" href="#responsible">Responsible use</a>
+          <a class="pill" href="#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
 
-.cta {
-  margin-top: 18px;
-}
+  <main id="top">
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <h1 class="h1">Tools to detect drift, instability and hidden dynamics in complex systems.</h1>
+            <p class="subtitle">
+              ErvraTech builds practical, auditable software that turns “something feels off” into measurable signals:
+              drift, amplification, instability, and multiscale variability — without hype, without black boxes.
+            </p>
 
-.note {
-  margin-top: 10px;
-  font-size: 0.95rem;
-  opacity: 0.8;
-}
+            <div class="cta-row">
+              <a class="btn" href="#products" aria-label="View products">
+                View products <small>→</small>
+              </a>
+              <a class="btn secondary" href="https://github.com/ervratech" target="_blank" rel="noopener">
+                GitHub <small>open repos</small>
+              </a>
+            </div>
 
-.card {
-  margin: 24px 0;
-  padding: 18px 18px;
-  border: 1px solid rgba(255,255,255,0.10);
-  border-radius: 14px;
-  background: rgba(255,255,255,0.03);
-}
+            <div class="kpi">
+              <span class="mono">static • fast • GitHub Pages</span>
+              <span class="mono">no tracking • no cookies</span>
+              <span class="mono">audit-first</span>
+            </div>
+          </div>
 
-.grid {
-  display: grid;
-  gap: 18px;
-}
+          <aside class="panel" aria-label="Demo panel">
+            <div class="panel-header">
+              <div class="mono" style="font-weight:700;">Change Impact Radar</div>
+              <div class="tag mono">demo</div>
+            </div>
+            <div class="panel-body">
+              <div class="score">
+                <div class="value mono" data-score>84</div>
+                <div class="outof mono">/100<br><span data-verdict>🟢 stable</span></div>
+              </div>
 
-@media (min-width: 900px) {
-  .grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
+              <div class="badges">
+                <span class="badge mono">no code execution</span>
+                <span class="badge mono">static parsing</span>
+                <span class="badge mono">PR comment</span>
+              </div>
 
-.footer {
-  margin-top: 40px;
-  opacity: 0.8;
-}
+              <div class="grid2">
+                <div class="mini">
+                  <h4 class="mono">Change size</h4>
+                  <p>Small diff — but touches high-amplification areas.</p>
+                </div>
+                <div class="mini">
+                  <h4 class="mono">Structure</h4>
+                  <p>Cross-module coupling detected (amplifies risk).</p>
+                </div>
+                <div class="mini">
+                  <h4 class="mono">Signal</h4>
+                  <p>Impact is structural, not just line count.</p>
+                </div>
+                <div class="mini">
+                  <h4 class="mono">Verdict</h4>
+                  <p>Ship with attention: review hotspots first.</p>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+        <hr class="sep" />
+      </div>
+    </section>
+
+    <section id="products" class="section">
+      <div class="container">
+        <h2>Products</h2>
+        <p class="lead">
+          Each product targets a <strong>distinct phenomenon</strong>. No duplicated tools pretending to be different.
+          Pick the signal you need — drift, amplification, instability, or validity.
+        </p>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Drift Radar</h3>
+            <div class="meta">
+              <span class="mono">phenomenon: drift</span>
+              <span class="mono">output: trend + alerts</span>
+              <span class="mono">use: monitoring</span>
+            </div>
+            <p>
+              Detects slow changes over time in metrics, processes or datasets.
+              Designed to catch “the system is sliding” before it becomes a failure.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Change Impact Radar</h3>
+            <div class="meta">
+              <span class="mono">phenomenon: amplification</span>
+              <span class="mono">output: impact score</span>
+              <span class="mono">use: PR review</span>
+            </div>
+            <p>
+              Scores software changes by structural amplification, not by diff size.
+              Works fast, avoids running code, and leaves an auditable trail in your PRs.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>MVM — Multiscale Variability Monitor</h3>
+            <div class="meta">
+              <span class="mono">phenomenon: instability</span>
+              <span class="mono">output: regimes</span>
+              <span class="mono">use: ops / R&D</span>
+            </div>
+            <p>
+              Finds unstable regimes and hidden transitions in complex signals.
+              Useful when averages look fine but reality is oscillating underneath.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Validity Layer</h3>
+            <div class="meta">
+              <span class="mono">phenomenon: validity</span>
+              <span class="mono">output: fail-closed checks</span>
+              <span class="mono">use: guardrails</span>
+            </div>
+            <p>
+              A strict validation layer that prevents “quietly wrong” results.
+              When the inputs or assumptions are broken, it fails closed — on purpose.
+            </p>
+          </article>
+        </div>
+
+        <div class="callout" style="margin-top:12px">
+          <p>
+            <strong>Rule:</strong> products are what people use. Architectures are what we use to build products.
+            Mixing both is how you get a website that sounds smart and sells nothing.
+          </p>
+        </div>
+
+        <hr class="sep" />
+      </div>
+    </section>
+
+    <section id="architectures" class="section">
+      <div class="container">
+        <h2>Architectures</h2>
+        <p class="lead">
+          Internal foundations. These are not products — they are building blocks used to produce the tools above.
+        </p>
+
+        <div class="cards">
+          <article class="card">
+            <h3>CIM — Chaos Intelligence Model</h3>
+            <p>Framework for extracting robust signals from complex dynamics (noise, regimes, multiscale structure).</p>
+          </article>
+
+          <article class="card">
+            <h3>CCADS — Complex Adaptive Data Structures</h3>
+            <p>Data structures and pipelines designed for evolving systems: stability, auditability and traceability first.</p>
+          </article>
+
+          <article class="card">
+            <h3>CB — Chaos Bridge</h3>
+            <p>Bridges measurements to decisions: mapping signals into interpretable, action-ready indicators.</p>
+          </article>
+
+          <article class="card">
+            <h3>SDR — Systemic Drift Representation</h3>
+            <p>A shared vocabulary for drift: what changed, how fast, and why it matters operationally.</p>
+          </article>
+        </div>
+
+        <hr class="sep" />
+      </div>
+    </section>
+
+    <section id="open" class="section">
+      <div class="container">
+        <h2>Open-source & credibility</h2>
+        <p class="lead">
+          We lean on a simple principle: if it cannot be audited, it cannot be trusted.
+        </p>
+
+        <div class="callout">
+          <p>
+            <strong>Open-source.</strong> Auditable. Reproducible. Minimal dependencies.
+            Prefer “boring, correct, transparent” over “flashy, unverifiable”.
+          </p>
+          <p style="margin-top:10px">
+            See code and releases on <a href="https://github.com/ervratech" target="_blank" rel="noopener"><strong>GitHub</strong></a>.
+          </p>
+        </div>
+
+        <hr class="sep" />
+      </div>
+    </section>
+
+    <section id="responsible" class="section">
+      <div class="container">
+        <h2>Responsible use</h2>
+        <p class="lead">
+          We build tools for science, engineering and defense-oriented safety — not for harm.
+        </p>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Not for offensive weapons</h3>
+            <p>We do not support development or optimization of offensive weapon systems.</p>
+          </article>
+          <article class="card">
+            <h3>Not for mass surveillance</h3>
+            <p>No tooling for indiscriminate tracking, profiling, or large-scale surveillance.</p>
+          </article>
+          <article class="card">
+            <h3>Not for manipulation</h3>
+            <p>No social influence engines. No dark patterns. No “behavior hacking”.</p>
+          </article>
+          <article class="card">
+            <h3>Built for auditability</h3>
+            <p>Transparent logic and reproducible outputs — so misuse is harder to hide.</p>
+          </article>
+        </div>
+
+        <hr class="sep" />
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact</h2>
+        <p class="lead">Direct, simple. No forms. No trackers. Just email.</p>
+
+        <div class="callout">
+          <p class="mono" style="font-size:16px;margin:0">
+            <strong>contact@ervra.tech</strong>
+          </p>
+          <p style="margin-top:10px">
+            If you reach out, include: your domain, the signal you want (drift / amplification / instability / validity),
+            and an example dataset or repo if possible.
+          </p>
+        </div>
+
+        <hr class="sep" />
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div>© <span data-year></span> ErvraTech — built for clarity.</div>
+        <div class="mono">
+          <a href="#top">Back to top</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
